@@ -1,0 +1,16 @@
+{
+  "name": "destino-app",
+  "version": "1.0.0",
+  "description": "Destino full stack application",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend-react",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix frontend-react && npm run build --prefix frontend-react"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
