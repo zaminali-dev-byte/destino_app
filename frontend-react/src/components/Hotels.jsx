@@ -37,10 +37,10 @@ const Hotels = () => {
                                             <ul className="list-style-one">
                                                 <li><i className="fal fa-bed-alt"></i> {hotel.bedrooms} Beds</li>
                                                 <li><i className="fal fa-bath"></i> {hotel.bathrooms} Baths</li>
-                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('pool')) && (
+                                                {hotel.amenities && String(hotel.amenities).toLowerCase().includes('pool') && (
                                                     <li><i className="fal fa-swimming-pool text-primary"></i> Pool</li>
                                                 )}
-                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('breakfast') || hotel.amenities.toLowerCase().includes('food')) && (
+                                                {hotel.amenities && (String(hotel.amenities).toLowerCase().includes('breakfast') || String(hotel.amenities).toLowerCase().includes('food')) && (
                                                     <li><i className="fal fa-utensils text-success"></i> Food Included</li>
                                                 )}
                                             </ul>
@@ -53,7 +53,7 @@ const Hotels = () => {
                                             <div className="ratting"><i className="fas fa-star"></i> {hotel.rating}</div>
                                             <a href="#" className="heart"><i className="fas fa-heart"></i></a>
                                             <Link to={`/hotel-details/${hotel._id}`}>
-                                                <img src={hotel.image} alt="Hotel" />
+                                                <img src={hotel.image?.startsWith('http') ? hotel.image : `/${hotel.image}`} alt="Hotel" onError={e => e.target.src='/assets/images/destinations/destination1.jpg'} />
                                             </Link>
                                         </div>
                                     </>
@@ -63,7 +63,7 @@ const Hotels = () => {
                                             <div className="ratting"><i className="fas fa-star"></i> {hotel.rating}</div>
                                             <a href="#" className="heart"><i className="fas fa-heart"></i></a>
                                             <Link to={`/hotel-details/${hotel._id}`}>
-                                                <img src={hotel.image} alt="Hotel" />
+                                                <img src={hotel.image?.startsWith('http') ? hotel.image : `/${hotel.image}`} alt="Hotel" onError={e => e.target.src='/assets/images/destinations/destination1.jpg'} />
                                             </Link>
                                         </div>
                                         <div className="content">
@@ -72,10 +72,10 @@ const Hotels = () => {
                                             <ul className="list-style-one">
                                                 <li><i className="fal fa-bed-alt"></i> {hotel.bedrooms} Beds</li>
                                                 <li><i className="fal fa-bath"></i> {hotel.bathrooms} Baths</li>
-                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('pool')) && (
+                                                {hotel.amenities && String(hotel.amenities).toLowerCase().includes('pool') && (
                                                     <li><i className="fal fa-swimming-pool text-primary"></i> Pool</li>
                                                 )}
-                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('breakfast') || hotel.amenities.toLowerCase().includes('food')) && (
+                                                {hotel.amenities && (String(hotel.amenities).toLowerCase().includes('breakfast') || String(hotel.amenities).toLowerCase().includes('food')) && (
                                                     <li><i className="fal fa-utensils text-success"></i> Food Included</li>
                                                 )}
                                             </ul>
