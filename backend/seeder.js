@@ -20,28 +20,28 @@ const importData = async () => {
     const destinations = [
       {
         name: "Hunza Valley",
-        image: "assets/images/destinations/destination1.jpg",
+        image: "assets/images/destinations/hunza.png",
         link: "destination1.html",
         toursCount: 15,
         activityCount: 20
       },
       {
         name: "Skardu",
-        image: "assets/images/destinations/destination2.jpg",
+        image: "assets/images/destinations/skardu.png",
         link: "destination2.html",
         toursCount: 12,
         activityCount: 18
       },
       {
         name: "Swat Valley",
-        image: "assets/images/destinations/destination3.jpg",
+        image: "assets/images/destinations/swat.png",
         link: "destination-details.html",
         toursCount: 10,
         activityCount: 15
       },
       {
         name: "Fairy Meadows",
-        image: "assets/images/destinations/destination4.jpg",
+        image: "assets/images/destinations/fairy_meadows.png",
         link: "destination-details.html",
         toursCount: 8,
         activityCount: 12
@@ -51,7 +51,7 @@ const importData = async () => {
     const hotels = [
       {
         name: "Northern Lights Resort",
-        image: "assets/images/destinations/hotel1.jpg",
+        image: "assets/images/destinations/hunza_darbar.png",
         location: "Hunza Valley",
         bedrooms: 2,
         kitchens: 1,
@@ -64,7 +64,7 @@ const importData = async () => {
       },
       {
         name: "Skardu View Hotel",
-        image: "assets/images/destinations/hotel2.jpg",
+        image: "assets/images/destinations/shangrila_resort.png",
         location: "Skardu",
         bedrooms: 1,
         kitchens: 0,
@@ -77,7 +77,7 @@ const importData = async () => {
       },
       {
         name: "Swat River Resort",
-        image: "assets/images/destinations/hotel3.jpg",
+        image: "assets/images/destinations/swat_continental.png",
         location: "Swat Valley",
         bedrooms: 3,
         kitchens: 1,
@@ -97,7 +97,7 @@ const importData = async () => {
         price: 500,
         duration: "7 Days",
         description: "Explore the beautiful Hunza Valley.",
-        imageUrl: "assets/images/destinations/tour1.jpg",
+        imageUrl: "assets/images/destinations/hunza.png",
         featured: true
       }
     ];

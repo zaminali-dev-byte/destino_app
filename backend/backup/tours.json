@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "69d64edc65faff75c5067c9f",
+    "title": "7 Days Majestic Hunza Tour",
+    "category": "Family",
+    "price": 500,
+    "duration": "7 Days",
+    "description": "Experience the breathtaking beauty of Hunza valley with your family.",
+    "imageUrl": "assets/images/destinations/hunza.png",
+    "featured": true,
+    "location": "Pakistan",
+    "lat": 33.6844,
+    "lng": 73.0479,
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.246Z",
+    "updatedAt": "2026-04-08T12:49:32.246Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067ca0",
+    "title": "K2 Base Camp Expedition",
+    "category": "Hiking & Camping",
+    "price": 1200,
+    "duration": "14 Days",
+    "description": "A rigorous and rewarding trek.",
+    "imageUrl": "assets/images/destinations/skardu.png",
+    "featured": false,
+    "location": "Pakistan",
+    "lat": 33.6844,
+    "lng": 73.0479,
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.246Z",
+    "updatedAt": "2026-04-08T12:49:32.246Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067ca1",
+    "title": "Fairy Meadows Adventure",
+    "category": "Hiking & Camping",
+    "price": 400,
+    "duration": "5 Days",
+    "description": "Walk through the lush green Fairy Meadows.",
+    "imageUrl": "assets/images/destinations/fairy_meadows.png",
+    "featured": false,
+    "location": "Pakistan",
+    "lat": 33.6844,
+    "lng": 73.0479,
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.246Z",
+    "updatedAt": "2026-04-08T12:49:32.246Z"
+  }
+]

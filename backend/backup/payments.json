@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "69d64edc65faff75c5067caf",
+    "bookingId": "69d64edc65faff75c5067cab",
+    "userId": "69d64edc65faff75c5067c90",
+    "amount": 900,
+    "currency": "USD",
+    "paymentMethod": "Credit Card",
+    "status": "Completed",
+    "transactionId": "TXN-9988776655",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.269Z",
+    "updatedAt": "2026-04-08T12:49:32.269Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067cb0",
+    "bookingId": "69d64edc65faff75c5067cad",
+    "userId": "69d64edc65faff75c5067c90",
+    "amount": 1150,
+    "currency": "USD",
+    "paymentMethod": "PayPal",
+    "status": "Completed",
+    "transactionId": "TXN-1122334455",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.269Z",
+    "updatedAt": "2026-04-08T12:49:32.269Z"
+  }
+]

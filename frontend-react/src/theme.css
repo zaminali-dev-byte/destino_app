@@ -1,0 +1,164 @@
+/* Global Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff !important;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode div:not([class*="bg-"]) {
+    color: #b3b3b3;
+}
+
+/* Public Site Overrides */
+body.dark-mode .header-area {
+    background: #1e1e1e !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .main-menu ul li a {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .tour-card,
+body.dark-mode .hotel-card,
+body.dark-mode .destination-card {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+body.dark-mode .footer-area {
+    background-color: #0d0d0d !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+    border-color: #444 !important;
+}
+
+/* Button Overrides */
+body.dark-mode .theme-btn,
+body.dark-mode .btn,
+body.dark-mode .auth-btn,
+body.dark-mode .btn-primary {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+}
+
+body.dark-mode .theme-btn:hover,
+body.dark-mode .btn:hover,
+body.dark-mode .auth-btn:hover,
+body.dark-mode .btn-primary:hover {
+    background-color: #2563eb !important;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #374151 !important;
+    color: #e5e7eb !important;
+    border-color: #4b5563 !important;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: #4b5563 !important;
+}
+
+body.dark-mode a {
+    color: #60a5fa;
+}
+
+body.dark-mode a:hover {
+    color: #93c5fd;
+}
+
+/* Admin Dashboard Overrides */
+body.dark-mode .admin-dashboard {
+    --admin-bg: #121212;
+    --admin-card-bg: #1e1e1e;
+    --admin-text-main: #f3f4f6;
+    --admin-text-muted: #9ca3af;
+    --admin-border: #374151;
+    --admin-sidebar-bg: #0f172a;
+}
+
+body.dark-mode .admin-header,
+body.dark-mode .stat-card,
+body.dark-mode .chart-card,
+body.dark-mode .data-table-container,
+body.dark-mode .modal-content,
+body.dark-mode .pagination {
+    background-color: var(--admin-card-bg);
+    border-color: var(--admin-border);
+}
+
+body.dark-mode .admin-table th {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border-color: var(--admin-border);
+}
+
+body.dark-mode .admin-table td {
+    color: #cbd5e1;
+    border-color: var(--admin-border);
+}
+
+body.dark-mode .admin-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .modal-footer {
+    background-color: #2d3748;
+}
+
+body.dark-mode .header-search input {
+    background-color: #2d3748;
+    color: #fff;
+    border-color: var(--admin-border);
+}
+
+body.dark-mode .page-btn {
+    background-color: var(--admin-card-bg);
+    color: var(--admin-text-main);
+    border-color: var(--admin-border);
+}
+
+body.dark-mode .page-btn:hover:not(:disabled) {
+    background-color: #374151;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+body.dark-mode .theme-toggle-btn {
+    color: #fcd34d; /* Sun color */
+}

@@ -1,0 +1,302 @@
+.custom-app-header {
+    position: fixed;
+    top: 25px; /* Floats down slightly */
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.header-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a221c; /* Deep forest green / dark slate to match screenshot */
+    border-radius: 50px;
+    padding: 12px 25px;
+    width: 100%;
+    max-width: 1100px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08); /* Subtle border like the image */
+}
+
+/* Hide logo slightly here to focus on the text like the screenshot, or keep it small */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.header-logo {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between; /* Space out the links and the auth buttons */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 35px; /* Healthy gap matching the image */
+}
+
+.nav-list li a, .nav-list li .dropdown-label {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-list li a:hover, .nav-list li .dropdown-label:hover, .nav-list li a.active {
+    color: #ffffff;
+    text-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+
+.dropdown-arrow {
+    font-size: 11px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+    margin-top: 2px;
+}
+
+/* Dropdown logic */
+.nav-dropdown {
+    position: relative;
+    padding: 10px 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px); /* Slide down effect */
+    background: #1e2a22; /* Slightly lighter dropdown */
+    min-width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    padding: 12px 25px;
+    display: block;
+    color: #e0e0e0;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    padding-left: 30px; /* Indent */
+}
+
+.view-all-link {
+    color: #61b965 !important;
+    font-weight: 600 !important;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth-btn {
+    padding: 9px 24px;
+    border-radius: 6px; /* Squarish-pill like the screenshot */
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.login-btn {
+    background-color: #61b965; /* Specific green from screenshot */
+    color: #fff;
+}
+
+.login-btn:hover {
+    background-color: #52a356;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(97, 185, 101, 0.3);
+}
+
+.register-btn {
+    background-color: #fb9324; /* Specific orange from screenshot */
+    color: #fff;
+}
+
+.register-btn:hover {
+    background-color: #e5821d;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(251, 147, 36, 0.3);
+}
+
+.dashboard-btn {
+    background-color: transparent;
+    border: 2px solid #61b965;
+    color: #61b965;
+    padding: 7px 20px; /* Account for border */
+}
+.dashboard-btn:hover {
+    background-color: #61b965;
+    color: #fff;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: #ff4d4f;
+    border: 2px solid transparent;
+}
+.logout-btn:hover { 
+    background-color: rgba(255, 77, 79, 0.1); 
+    border-color: #ff4d4f;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+    .header-pill {
+        border-radius: 12px;
+        padding: 15px 25px;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        background: #1a221c;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .header-nav.open {
+        max-height: 800px;
+        padding: 25px;
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .nav-list li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding-bottom: 15px;
+    }
+
+    .nav-dropdown {
+        padding: 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+        border: none;
+        display: none; 
+    }
+
+    .nav-dropdown.active .dropdown-menu,
+    .nav-dropdown:hover .dropdown-menu {
+        display: block;
+        transform: none;
+        margin-top: 10px;
+        border-left: 2px solid #61b965; /* Visual indicator on mobile */
+        border-radius: 0;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .header-actions {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    .auth-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}

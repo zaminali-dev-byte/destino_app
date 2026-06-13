@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "69d64edc65faff75c5067ca7",
+    "code": "WELCOME10",
+    "discountType": "Percentage",
+    "discountValue": 10,
+    "minOrderAmount": 100,
+    "maxDiscount": null,
+    "validFrom": "2026-04-08T12:49:32.254Z",
+    "validTo": "2026-05-08T12:49:32.254Z",
+    "usageLimit": 100,
+    "usedCount": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.257Z",
+    "updatedAt": "2026-04-08T12:49:32.257Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067ca8",
+    "code": "DESTINO50",
+    "discountType": "Fixed",
+    "discountValue": 50,
+    "minOrderAmount": 300,
+    "maxDiscount": null,
+    "validFrom": "2026-04-08T12:49:32.254Z",
+    "validTo": "2026-05-08T12:49:32.254Z",
+    "usageLimit": 100,
+    "usedCount": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.257Z",
+    "updatedAt": "2026-04-08T12:49:32.257Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067ca9",
+    "code": "SUMMER25",
+    "discountType": "Percentage",
+    "discountValue": 25,
+    "minOrderAmount": 0,
+    "maxDiscount": 100,
+    "validFrom": "2026-04-08T12:49:32.254Z",
+    "validTo": "2026-05-08T12:49:32.254Z",
+    "usageLimit": 100,
+    "usedCount": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.257Z",
+    "updatedAt": "2026-04-08T12:49:32.257Z"
+  }
+]

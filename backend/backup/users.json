@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "69d64edc65faff75c5067c8e",
+    "name": "Admin User",
+    "email": "admin@destino.com",
+    "passwordHash": "$2b$10$1s0oUFKciNNBhrhM5AGuTenKDS/J1ctJ79uY.JN4AFlu5Y0BpRyua",
+    "role": "admin",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.218Z",
+    "updatedAt": "2026-04-08T12:49:32.218Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067c8f",
+    "name": "Tariq Guide",
+    "email": "guide@destino.com",
+    "passwordHash": "$2b$10$1s0oUFKciNNBhrhM5AGuTenKDS/J1ctJ79uY.JN4AFlu5Y0BpRyua",
+    "phone": "0300-1122334",
+    "role": "staff",
+    "cnic": "35201-1234567-1",
+    "license": "HTV-LR-2024-88",
+    "vehicleNumber": "LED-9900",
+    "vehicleModel": "Toyota Hiace High Roof",
+    "experience": "12 Years Mountain Guide",
+    "emergencyContact": "+92-300-9988776",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.221Z",
+    "updatedAt": "2026-04-08T12:49:32.221Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067c90",
+    "name": "John Traveler",
+    "email": "user@destino.com",
+    "passwordHash": "$2b$10$1s0oUFKciNNBhrhM5AGuTenKDS/J1ctJ79uY.JN4AFlu5Y0BpRyua",
+    "phone": "0321-5556677",
+    "role": "customer",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.221Z",
+    "updatedAt": "2026-04-08T12:49:32.221Z"
+  }
+]

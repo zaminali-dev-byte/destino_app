@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hotels = () => {
     const [hotels, setHotels] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/api/hotels')
+        fetch('/api/hotels')
             .then(res => res.json())
-            .then(data => setHotels(data))
+            .then(data => {
+                setHotels(data.slice(0, 4)); // Only show top 4 on homepage
+                setTimeout(() => window.AOS && window.AOS.refresh(), 100);
+            })
             .catch(err => console.error("Error fetching hotels:", err));
     }, []);
 
@@ -29,22 +33,28 @@ const Hotels = () => {
                                     <>
                                         <div className="content">
                                             <span className="location"><i className="fal fa-map-marker-alt"></i> {hotel.location}</span>
-                                            <h5><a href={"#"}>{hotel.name}</a></h5>
+                                            <h5><Link to={`/hotel-details/${hotel._id}`}>{hotel.name}</Link></h5>
                                             <ul className="list-style-one">
-                                                <li><i className="fal fa-bed-alt"></i> {hotel.bedrooms}</li>
-                                                <li><i className="fal fa-hat-chef"></i> {hotel.kitchens}</li>
-                                                <li><i className="fal fa-bath"></i> {hotel.bathrooms}</li>
-                                                <li><i className="fal fa-router"></i> {hotel.amenities}</li>
+                                                <li><i className="fal fa-bed-alt"></i> {hotel.bedrooms} Beds</li>
+                                                <li><i className="fal fa-bath"></i> {hotel.bathrooms} Baths</li>
+                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('pool')) && (
+                                                    <li><i className="fal fa-swimming-pool text-primary"></i> Pool</li>
+                                                )}
+                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('breakfast') || hotel.amenities.toLowerCase().includes('food')) && (
+                                                    <li><i className="fal fa-utensils text-success"></i> Food Included</li>
+                                                )}
                                             </ul>
                                             <div className="destination-footer">
                                                 <span className="price"><span>{hotel.priceInfo}</span>/per night</span>
-                                                <a href="#" className="read-more">Book Now <i className="fal fa-angle-right"></i></a>
+                                                <Link to={`/hotel-details/${hotel._id}`} className="read-more">Book Now <i className="fal fa-angle-right"></i></Link>
                                             </div>
                                         </div>
                                         <div className="image">
                                             <div className="ratting"><i className="fas fa-star"></i> {hotel.rating}</div>
                                             <a href="#" className="heart"><i className="fas fa-heart"></i></a>
-                                            <img src={hotel.image} alt="Hotel" />
+                                            <Link to={`/hotel-details/${hotel._id}`}>
+                                                <img src={hotel.image} alt="Hotel" />
+                                            </Link>
                                         </div>
                                     </>
                                 ) : (
@@ -52,20 +62,26 @@ const Hotels = () => {
                                         <div className="image">
                                             <div className="ratting"><i className="fas fa-star"></i> {hotel.rating}</div>
                                             <a href="#" className="heart"><i className="fas fa-heart"></i></a>
-                                            <img src={hotel.image} alt="Hotel" />
+                                            <Link to={`/hotel-details/${hotel._id}`}>
+                                                <img src={hotel.image} alt="Hotel" />
+                                            </Link>
                                         </div>
                                         <div className="content">
                                             <span className="location"><i className="fal fa-map-marker-alt"></i> {hotel.location}</span>
-                                            <h5><a href="destination-details.html">{hotel.name}</a></h5>
+                                            <h5><Link to={`/hotel-details/${hotel._id}`}>{hotel.name}</Link></h5>
                                             <ul className="list-style-one">
-                                                <li><i className="fal fa-bed-alt"></i> {hotel.bedrooms}</li>
-                                                <li><i className="fal fa-hat-chef"></i> {hotel.kitchens}</li>
-                                                <li><i className="fal fa-bath"></i> {hotel.bathrooms}</li>
-                                                <li><i className="fal fa-router"></i> {hotel.amenities}</li>
+                                                <li><i className="fal fa-bed-alt"></i> {hotel.bedrooms} Beds</li>
+                                                <li><i className="fal fa-bath"></i> {hotel.bathrooms} Baths</li>
+                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('pool')) && (
+                                                    <li><i className="fal fa-swimming-pool text-primary"></i> Pool</li>
+                                                )}
+                                                {hotel.amenities && (hotel.amenities.toLowerCase().includes('breakfast') || hotel.amenities.toLowerCase().includes('food')) && (
+                                                    <li><i className="fal fa-utensils text-success"></i> Food Included</li>
+                                                )}
                                             </ul>
                                             <div className="destination-footer">
                                                 <span className="price"><span>{hotel.priceInfo}</span>/per night</span>
-                                                <a href="#" className="read-more">Book Now <i className="fal fa-angle-right"></i></a>
+                                                <Link to={`/hotel-details/${hotel._id}`} className="read-more">Book Now <i className="fal fa-angle-right"></i></Link>
                                             </div>
                                         </div>
                                     </>
@@ -75,10 +91,10 @@ const Hotels = () => {
                     ))}
                 </div>
                 <div className="hotel-more-btn text-center mt-40">
-                    <a href="destination2.html" className="theme-btn style-four">
-                        <span data-hover="Explore More Hotel">Explore More Hotel</span>
+                    <Link to="/search" className="theme-btn style-four">
+                        <span data-hover="Explore More Hotels">Explore More Hotels</span>
                         <i className="fal fa-arrow-right"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

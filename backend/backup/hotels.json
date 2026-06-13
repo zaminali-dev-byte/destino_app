@@ -1,0 +1,53 @@
+[
+  {
+    "_id": "69d64edc65faff75c5067ca3",
+    "name": "Serena Hotel Gilgit",
+    "image": "assets/images/destinations/serena_gilgit.png",
+    "location": "Gilgit",
+    "bedrooms": 50,
+    "kitchens": 1,
+    "bathrooms": 50,
+    "amenities": "WiFi, Breakfast Included, Heating",
+    "priceInfo": "$150/night",
+    "rating": 5,
+    "imageRight": false,
+    "delay": "0",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.252Z",
+    "updatedAt": "2026-04-08T12:49:32.252Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067ca4",
+    "name": "Shangrila Resort",
+    "image": "assets/images/destinations/shangrila_resort.png",
+    "location": "Skardu",
+    "bedrooms": 40,
+    "kitchens": 1,
+    "bathrooms": 40,
+    "amenities": "Lake View, Boating, Spa, Breakfast",
+    "priceInfo": "$250/night",
+    "rating": 5,
+    "imageRight": false,
+    "delay": "0",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.252Z",
+    "updatedAt": "2026-04-08T12:49:32.252Z"
+  },
+  {
+    "_id": "69d64edc65faff75c5067ca5",
+    "name": "Luxus Grand Resort",
+    "image": "assets/images/destinations/skardu.png",
+    "location": "Skardu",
+    "bedrooms": 80,
+    "kitchens": 1,
+    "bathrooms": 80,
+    "amenities": "Luxury, Spa, Infinity Pool, Breakfast",
+    "priceInfo": "$350/night",
+    "rating": 5,
+    "imageRight": false,
+    "delay": "0",
+    "__v": 0,
+    "createdAt": "2026-04-08T12:49:32.252Z",
+    "updatedAt": "2026-04-08T12:49:32.252Z"
+  }
+]
