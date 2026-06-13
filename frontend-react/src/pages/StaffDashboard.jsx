@@ -268,7 +268,7 @@ const StaffDashboard = () => {
                                         return (
                                             <div key={task._id} className="col-md-12 mb-20">
                                                 <div className="task-card" style={{ background: '#fff', border: '1px solid #ddd', borderRadius: '8px', padding: '20px', display: 'flex', gap: '20px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
-                                                    <img src={`/${itemImg}`} alt="Trip" style={{ width: '150px', height: '100px', objectFit: 'cover', borderRadius: '4px' }} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
+                                                    <img src={itemImg?.startsWith('http') ? itemImg : `/${itemImg}`} alt="Trip" style={{ width: '150px', height: '100px', objectFit: 'cover', borderRadius: '4px' }} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
                                                     <div style={{ flex: 1 }}>
                                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                                             <div>

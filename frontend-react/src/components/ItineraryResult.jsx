@@ -108,7 +108,7 @@ const ItineraryResult = ({ trip, relatedTours }) => {
                                         <div className="card shadow-sm h-100 border-0" style={{ borderRadius: '12px', overflow: 'hidden' }}>
                                             <div style={{ height: '160px', overflow: 'hidden', backgroundColor: '#f1f5f9' }}>
                                                 {tour.imageUrl ? (
-                                                    <img src={`/${tour.imageUrl}`} alt={tour.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                    <img src={tour.imageUrl?.startsWith('http') ? tour.imageUrl : `/${tour.imageUrl}`} alt={tour.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                 ) : (
                                                     <div className="d-flex h-100 align-items-center justify-content-center text-muted">
                                                         <i className="fal fa-image fa-3x"></i>

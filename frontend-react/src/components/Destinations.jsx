@@ -31,7 +31,7 @@ const Destinations = ({ query = '' }) => {
                                     <div className="image" style={{ overflow: 'hidden', borderRadius: '8px' }}>
                                         <Link to={`/search?q=${dest.name}`} className="heart" style={{ zIndex: 10 }}><i className="fas fa-heart"></i></Link>
                                         <Link to={`/search?q=${dest.name}`} style={{ display: 'block' }}>
-                                            <img src={`/${dest.image}`} alt={dest.name} style={{ width: '100%', height: '350px', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                                            <img src={dest.image?.startsWith('http') ? dest.image : `/${dest.image}`} alt={dest.name} style={{ width: '100%', height: '350px', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                                         </Link>
                                     </div>
                                     <div className="content">

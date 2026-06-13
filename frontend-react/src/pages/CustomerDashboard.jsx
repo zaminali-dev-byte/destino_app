@@ -151,7 +151,7 @@ const CustomerDashboard = () => {
 
                                                 return (
                                                 <div key={b._id || i} style={{ border: '1px solid #eee', borderRadius: '8px', padding: '15px', display: 'flex', gap: '20px' }}>
-                                                    <img src={`/${itemImg}`} alt="Trip" style={{ width: '120px', height: '120px', borderRadius: '8px', objectFit: 'cover' }} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
+                                                    <img src={itemImg?.startsWith('http') ? itemImg : `/${itemImg}`} alt="Trip" style={{ width: '120px', height: '120px', borderRadius: '8px', objectFit: 'cover' }} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
                                                     <div style={{ flex: 1 }}>
                                                         <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
                                                             <span style={{ padding: '3px 8px', background: sColors.bg, color: sColors.color, borderRadius: '4px', fontSize: '11px', fontWeight: 'bold', textTransform: 'uppercase' }}>

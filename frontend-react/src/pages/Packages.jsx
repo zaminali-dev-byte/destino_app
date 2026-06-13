@@ -79,7 +79,7 @@ const Packages = () => {
                                 {/* Package Image */}
                                 <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
                                     <img
-                                        src={pkg.imageUrl ? `/${pkg.imageUrl}` : '/assets/images/destinations/destination1.jpg'}
+                                        src={pkg.imageUrl ? (pkg.imageUrl.startsWith('http') ? pkg.imageUrl : `/${pkg.imageUrl}`) : '/assets/images/destinations/destination1.jpg'}
                                         alt={pkg.title}
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                         onError={e => { e.target.src = '/assets/images/destinations/destination1.jpg'; }}

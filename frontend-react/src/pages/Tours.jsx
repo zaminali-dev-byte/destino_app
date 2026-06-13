@@ -113,7 +113,7 @@ const Tours = () => {
                                         </button>
                                         <div className="image" style={{ position: 'relative', overflow: 'hidden' }}>
                                             <Link to={`/tour-details/${tour._id}`} style={{ display: 'block' }}>
-                                                <img src={tour.imageUrl || "assets/images/destinations/destination1.jpg"} alt={tour.title} style={{ width: '100%', height: '260px', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                                                <img src={tour.imageUrl ? (tour.imageUrl.startsWith('http') ? tour.imageUrl : `/${tour.imageUrl}`) : "assets/images/destinations/destination1.jpg"} alt={tour.title} style={{ width: '100%', height: '260px', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                                             </Link>
                                             <span className="price" style={{ position: 'absolute', top: '20px', right: '20px', background: '#ffb300', padding: '8px 20px', borderRadius: '30px', color: '#fff', fontWeight: 'bold', fontSize: '18px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)', pointerEvents: 'none' }}>
                                                 ${tour.price}

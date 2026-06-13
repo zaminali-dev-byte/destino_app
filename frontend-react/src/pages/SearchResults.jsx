@@ -235,7 +235,7 @@ const SearchResults = () => {
                                         </button>
                                         <div className="img-wrap" style={{ flex: '0 0 250px', height: '220px', borderRadius: '8px', overflow: 'hidden' }}>
                                             <Link to={`${item.routeTarget}?date=${dateQuery}&guests=${guestsQuery}`} style={{ display: 'block', height: '100%' }}>
-                                                <img src={`/${item.img}`} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
+                                                <img src={item.img?.startsWith('http') ? item.img : `/${item.img}`} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
                                             </Link>
                                         </div>
                                         <div className="content-wrap" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
@@ -295,7 +295,7 @@ const SearchResults = () => {
                                     {filteredProperties.map(item => (
                                         <Marker key={`map-${item.displayId}`} position={[item.lat || 33.6844 + (Math.random()*4 - 2), item.lng || 73.0479 + (Math.random()*4 - 2)]}>
                                             <Popup>
-                                                <img src={`/${item.img}`} alt={item.title} style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '6px', marginBottom: '10px' }} />
+                                                <img src={item.img?.startsWith('http') ? item.img : `/${item.img}`} alt={item.title} style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '6px', marginBottom: '10px' }} />
                                                 <h6 style={{ margin: '0 0 5px 0', fontSize: '14px' }}>{item.title}</h6>
                                                 <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: '#0071c2' }}>US${item.price}</p>
                                                 <Link to={`${item.routeTarget}?date=${dateQuery}&guests=${guestsQuery}`} style={{ display: 'block', background: '#0071c2', color: '#fff', textAlign: 'center', padding: '5px', borderRadius: '4px', textDecoration: 'none' }}>View Details</Link>

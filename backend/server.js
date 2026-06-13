@@ -171,14 +171,16 @@ mongoose.connect(process.env.MONGODB_URI, {
 })
 .then(() => {
     console.log('MongoDB connection established');
-    app.listen(PORT, () => {
-        console.log('');
-        console.log('  BACKEND  ready');
-        console.log('');
-        console.log(`  \u279C  Local:    http://localhost:${PORT}/`);
-        console.log(`  \u279C  API Root: http://localhost:${PORT}/api`);
-        console.log('');
-    });
+    if (process.env.NODE_ENV !== 'production') {
+        app.listen(PORT, () => {
+            console.log('');
+            console.log('  BACKEND  ready');
+            console.log('');
+            console.log(`  \u279C  Local:    http://localhost:${PORT}/`);
+            console.log(`  \u279C  API Root: http://localhost:${PORT}/api`);
+            console.log('');
+        });
+    }
 })
 .catch(err => {
     console.error('\n' + ' '.repeat(2) + '\u274C MongoDB connection error:');
@@ -187,5 +189,9 @@ mongoose.connect(process.env.MONGODB_URI, {
         console.error('\n' + ' '.repeat(4) + 'TIP: Check your MongoDB Atlas "Network Access" settings.');
         console.error(' '.repeat(4) + 'Ensure your current IP address is whitelisted.');
     }
-    process.exit(1);
+    if (process.env.NODE_ENV !== 'production') {
+        process.exit(1);
+    }
 });
+
+module.exports = app;

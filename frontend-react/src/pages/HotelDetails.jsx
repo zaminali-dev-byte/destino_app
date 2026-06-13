@@ -100,7 +100,7 @@ const HotelDetails = () => {
 
                 <div className="row mb-40">
                     <div className="col-lg-8" style={{ paddingRight: '10px' }}>
-                        <img src={`/${hotel.image}`} alt={hotel.name} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '8px 0 0 8px' }} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
+                        <img src={hotel.image?.startsWith('http') ? hotel.image : `/${hotel.image}`} alt={hotel.name} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '8px 0 0 8px' }} onError={(e) => e.target.src="/assets/images/destinations/destination1.jpg"} />
                     </div>
                     <div className="col-lg-4" style={{ paddingLeft: '0', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                          <img src="/assets/images/destinations/destination2.jpg" alt="Gallery" style={{ width: '100%', height: '195px', objectFit: 'cover', borderRadius: '0 8px 0 0' }} />
