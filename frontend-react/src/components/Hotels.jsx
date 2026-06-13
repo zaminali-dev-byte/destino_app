@@ -27,7 +27,7 @@ const Hotels = () => {
                 </div>
                 <div className="row justify-content-center">
                     {hotels.map((hotel, index) => (
-                        <div className="col-xxl-6 col-xl-8 col-lg-10" key={hotel._id || index}>
+                        <div className="col-xxl-6 col-xl-8 col-lg-10 col-md-12 col-12" key={hotel._id || index}>
                             <div className="destination-item style-three">
                                 {hotel.imageRight ? (
                                     <>
